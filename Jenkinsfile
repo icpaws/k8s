@@ -1,8 +1,3 @@
-pipeline {
-agent {
-label "dvmaster02-JSlave"
-}
-    
 node {
     def app
 
@@ -39,4 +34,8 @@ node {
         }
     }
 }
+}
+pipeline {
+agent {
+label "dvmaster02-JSlave"
 }
