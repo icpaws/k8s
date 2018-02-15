@@ -1,4 +1,3 @@
-agent 'dvmaster02-JSlave'
 node {
     def app
 
@@ -11,6 +10,7 @@ node {
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
+        agent 'dvmaster02-JSlave'
         app = docker.build("getintodevops/hellonode")
     }
 
@@ -28,6 +28,7 @@ node {
          * First, the incremental build number from Jenkins
          * Second, the 'latest' tag.
          * Pushing multiple tags is cheap, as all the layers are reused. */
+        agent 'dvmaster02-JSlave'
         docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
