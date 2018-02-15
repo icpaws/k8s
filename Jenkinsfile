@@ -1,4 +1,4 @@
-agent dvmaster02-JSlave
+agent 'dvmaster02-JSlave'
 node {
     def app
 
