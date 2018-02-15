@@ -1,3 +1,4 @@
+pipeline {
 agent {
 label "dvmaster02-JSlave"
 }
@@ -37,4 +38,5 @@ node {
             app.push("latest")
         }
     }
+}
 }
