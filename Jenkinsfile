@@ -6,7 +6,7 @@ node {
 
         checkout scm
     }
-
+ agent {label 'dvmaster02-JSlave'}
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
