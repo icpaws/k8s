@@ -10,7 +10,6 @@ node {
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-        docker.withServer('tcp://192.168.2.182:2376')
         app = docker.build("getintodevops/hellonode")
     }
 
