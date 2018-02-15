@@ -34,7 +34,6 @@ node {
         }
     }
 }
-}
 pipeline {
 agent {
 label "dvmaster02-JSlave"
