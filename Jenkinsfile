@@ -1,3 +1,8 @@
+pipeline {
+agent {
+label "dvmaster02-JSlave"
+}
+    
 node {
     def app
 
@@ -6,11 +11,10 @@ node {
 
         checkout scm
     }
- agent {label 'dvmaster02-JSlave'}
+ agent {label ''}
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-        agent 'dvmaster02-JSlave'
         app = docker.build("getintodevops/hellonode")
     }
 
