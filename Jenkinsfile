@@ -1,4 +1,4 @@
-node {
+node (label: 'dvmaster02-JSlave') {
     def app
 
     stage('Clone repository') {
@@ -33,8 +33,4 @@ node {
             app.push("latest")
         }
     }
-}
-pipeline {
-agent {
-label "dvmaster02-JSlave"
 }
