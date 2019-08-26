@@ -1,5 +1,5 @@
 {
-  "name": "getintodevops-hellonode",
+  "name": "icpaws-hellonode",
   "version": "1.0.0",
   "description": "A Hello World HTTP server",
   "main": "main.js",
@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/getintodevops/hellonode/"
+    "url": "https://github.com/icpaws/jenkinProject/"
   },
   "keywords": [
     "node",
     "docker",
     "dockerfile"
   ],
-  "author": "miiro@getintodevops.com",
+  "author": "icpaws@outlook.com",
   "license": "ISC"
 }
