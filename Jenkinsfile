@@ -32,4 +32,10 @@ node (label: 'master') {
             app.push("latest")
         }
     }
+
+    stage('K8S Deployment') {
+        /* deploy to kubernetes */
+
+         kubectl run redis-pod --image=icpaws/jenkinproject --port=6379 --generator=run/v1    
+    }
 }
