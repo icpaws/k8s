@@ -35,7 +35,6 @@ node (label: 'master') {
 
     stage('K8S Deployment') {
         /* deploy to kubernetes */
-
-         kubectl run redis-pod --image=icpaws/jenkinproject --port=6379 --generator=run/v1    
+         sh 'kubectl run redis-pod --image=icpaws/jenkinproject --port=6379 --generator=run/v1'    
     }
 }
